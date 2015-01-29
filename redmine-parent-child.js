@@ -8,11 +8,12 @@
 // @grant        none
 // ==/UserScript==
 
+// http://localhost:8080/redmine/projects/.*/repository/revisions/.*/?  -> in theory should work but it doesn't for me with 
+// tempermonkey
 (function() {
     
-    const version = "0.0.1";
-    
-	var prev = "";
+    var version = "0.0.2";
+    var prev = "";
     var next = "";
     var url_ = window.location.href.split("/").splice(0,9).join("/");
     
@@ -22,8 +23,8 @@
         success: function(data){
             var el = $( '<div></div>' );
             el.html(data);
-            prev = $(".contextual a", el)[0].href
-            next = $(".contextual a", el)[1].href	
+            prev = $(".contextual a", el)[0].href;
+            next = $(".contextual a", el)[1].href;	
         }
     });
     
