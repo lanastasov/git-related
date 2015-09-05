@@ -16,3 +16,8 @@ CoordMode, Mouse, Screen
   Click 1024, 500
   MouseMove, xpos, ypos
 Return
+
+; CTRL + Alt + T to run C:\Windows\system32\cmd.exe
+^!t::
+Run %comspec% /k
+return
