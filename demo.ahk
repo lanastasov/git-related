@@ -58,6 +58,7 @@ Return
   Loop, 5
   Send, ^{up}
 return
+;/////////////////// ShareX application ////////////////////
 
 ; CTRL + Alt + T to run C:\Windows\system32\cmd.exe
 ^!t::
