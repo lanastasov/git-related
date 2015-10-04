@@ -3,3 +3,4 @@
 - git
 - redmine
 - vlc
+- autohotkey
