@@ -1,2 +1,5 @@
 # git-related
-some git or github or redmine related staff
+
+- git
+- redmine
+- vlc
