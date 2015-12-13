@@ -20,6 +20,13 @@ Return
 ;  MouseMove, xpos, ypos
 ;Return
 
+
+;Always On Top for Sublime only - Win + s
+#IfWinActive, ahk_class SKMainWindowClass
+#s:: Winset, Alwaysontop, , A
+return
+#IfWinActive
+
 ;/////////////////// ShareX application ////////////////////
 ; Ctrl+j
 ^j::
