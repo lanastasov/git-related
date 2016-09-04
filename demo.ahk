@@ -12,6 +12,16 @@ PrintScreen::
     Send ^{F8}
 Return
 
+;zoom in top right corner
+;bug -> if we are in text mode(sublime) and press F11 a plus sign is added after the operation is finished
+F11::
+   CoordMode, Mouse, Screen
+   MouseMove, 2560, 0
+   Send #{+}
+   Sleep 400
+   MouseMove, 2060, 450
+Return
+
 ; map ctrl+j to movement of the mouse to 1024, 500 and getting back to initial position
 ;^j::
 ;CoordMode, Mouse, Screen
