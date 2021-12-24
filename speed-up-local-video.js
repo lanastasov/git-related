@@ -8,6 +8,8 @@
 // @grant        none
 // ==/UserScript==
 
+// chrome -> settings -> extensions -> tampermonkey -> allow file URLS
+
 (function() {
     'use strict';
 	document.querySelector('video').playbackRate = 1.5;
