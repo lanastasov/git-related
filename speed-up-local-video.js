@@ -16,6 +16,17 @@
 	document.getElementsByTagName('video')[0].volume = 0.8;
     var fullScrn = true;
 	window.addEventListener("keydown", function(event){
+		
+		// left arrow
+		if (event.keyCode == 37) {
+		    event.preventDefault();
+		    document.querySelector('video').currentTime = document.querySelector('video').currentTime - 5;
+		}
+		// right arrow
+		if (event.keyCode == 39) {
+		    event.preventDefault();
+		    document.querySelector('video').currentTime = document.querySelector('video').currentTime + 5;
+		}
 
 		if (event.keyCode == 34) {
 			event.preventDefault();
