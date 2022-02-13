@@ -16,7 +16,10 @@
 	document.getElementsByTagName('video')[0].volume = 0.8;
     var fullScrn = true;
 	window.addEventListener("keydown", function(event){
-		
+		// backspace get back 
+		if (event.keyCode == 8) {
+		    history.back();
+		}
 		// left arrow
 		if (event.keyCode == 37) {
 		    event.preventDefault();
