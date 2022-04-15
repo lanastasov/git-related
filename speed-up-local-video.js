@@ -12,10 +12,14 @@
 
 (function() {
     'use strict';
-	document.querySelector('video').playbackRate = 1.5;
-	document.getElementsByTagName('video')[0].volume = 0.8;
-    var fullScrn = true;
+	document.querySelector('video').playbackRate = 1.75;
+	document.getElementsByTagName('video')[0].volume = 1.0;
+    	var fullScrn = true;
 	window.addEventListener("keydown", function(event){
+		// 3 for playbackRate = 3.0
+		if (event.keyCode == 51) {
+		    document.querySelector('video').playbackRate = 3;
+		}
 		// backspace get back 
 		if (event.keyCode == 8) {
 		    history.back();
@@ -43,7 +47,7 @@
 		}
 
 		if (event.keyCode == 36) {
-            var	hlp = document.createElement('div');
+            	var	hlp = document.createElement('div');
 			hlp.style.position = 'absolute';
 			hlp.style.top='0';
 			hlp.style.left='0';
@@ -63,7 +67,7 @@
 			},2000);
 		}
 
-    if (event.keyCode == 70) {
+		if (event.keyCode == 70) {
 			if (fullScrn) {
 				document.querySelector('video').requestFullscreen();
 				fullScrn = false;
