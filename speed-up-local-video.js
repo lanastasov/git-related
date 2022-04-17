@@ -20,6 +20,14 @@
 		if (event.keyCode == 51) {
 		    document.querySelector('video').playbackRate = 3;
 		}
+		// 2 for playbackRate = 1.75;
+		if (event.keyCode == 50) {
+		    document.querySelector('video').playbackRate = 1.75;
+		}
+		// 1 for playbackRate = 1.0
+		if (event.keyCode == 49) {
+		    document.querySelector('video').playbackRate = 1.0;
+		}
 		// backspace get back 
 		if (event.keyCode == 8) {
 		    history.back();
