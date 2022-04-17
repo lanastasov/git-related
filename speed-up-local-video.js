@@ -14,7 +14,18 @@
     'use strict';
 	document.querySelector('video').playbackRate = 1.75;
 	document.getElementsByTagName('video')[0].volume = 1.0;
-    	var fullScrn = true;
+	var player = document.getElementsByTagName('video')[0];
+	var fullScrn = true;
+	var isPlaying = false;
+	function togglePlay() {
+	    if (isPlaying) {
+		player.pause();
+		isPlaying = false;
+	    } else {
+		player.play();
+		isPlaying = true;
+	    }
+	}
 	window.addEventListener("keydown", function(event){
 		// 3 for playbackRate = 3.0
 		if (event.keyCode == 51) {
@@ -42,6 +53,12 @@
 		    event.preventDefault();
 		    document.querySelector('video').currentTime = document.querySelector('video').currentTime + 5;
 		}
+		
+		// 32 = space
+	        if (event.keyCode == 32) {
+		    event.preventDefault();
+		    togglePlay(isPlaying);
+	        }
 
 		if (event.keyCode == 34) {
 			event.preventDefault();
