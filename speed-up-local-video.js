@@ -76,13 +76,11 @@
 		}
 
 		if (event.keyCode == 70) {
-			if (fullScrn) {
-				document.querySelector('video').requestFullscreen();
-				fullScrn = false;
-			} else {
-				document.exitFullscreen();
-				fullScrn = true;
-			}
+		        if (document.fullscreenElement === null) {
+			        document.querySelector('video').requestFullscreen();
+		        } else {
+			        document.exitFullscreen();
+		        }
 		}
 	});
 })();
